@@ -14,8 +14,8 @@ class MyHandler(FileSystemEventHandler):
             print(f"Copy {src} to {new_file}")
             os.rename(src, new_file)
 
-folder_listen = '/home/cristian/Desktop/python_projects'
-new_folder = '/home/cristian/Desktop/new'
+folder_listen = '' # Ej. '/home/user/folder_org'
+new_folder = '' # Ej. '/home/user/folder_dest'
 event_handler = MyHandler()
 observer = Observer()
 observer.schedule(event_handler, folder_listen, recursive=True)
